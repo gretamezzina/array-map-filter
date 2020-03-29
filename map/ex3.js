@@ -61,9 +61,29 @@ Expected OUTPUT for this sample:
 
  */
 
-function getMoviesFreshness(movies) {
-  return movies.map (movie => movie.rating < 60 ? movie.lablel = 'rotten' : movie.rating <= 75 && movie.rating >=60 ? movie.lablel = 'fresh' : movie.lablel = 'certified fresh'  )
+function getMoviesFreshness(movies) {return movies.map(movie => {
+      if (movie.rating < 60){
+        movie.label = 'rotten' 
+      } else if (movie.rating <= 75 && movie.rating >=60) {
+        movie.label = 'fresh'
+      } else{
+        movie.label = 'certified fresh'
+      }
+      return movie
+    })
 }
+
+// function getMoviesFreshness(movies) {return movies.map(movie => {
+// 	if (movie.rating < 60) {
+// 		movie.label = "rotten"
+// 	} else if (movie.rating > 75) {
+// 		movie.label = "certified fresh"
+// 	} else {
+// 		movie.label = "fresh"
+// 	}
+// 	return movie
+// })
+// }
 
 // * Each "movie" object has two properties:
 //    * `name` name of the movie

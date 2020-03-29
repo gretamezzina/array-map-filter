@@ -43,8 +43,9 @@ Expected OUTPUT for this sample
 */
 
 function getFoodCategories(foods) {
-  return foods.maps (food => food.isVegetarian === true ? `${food} is suitable for vegetarians`: `${food} is not suitable for vegetarians`)
+  return foods.map (obj => obj.isVegetarian === true ? `${obj.food} is suitable for vegetarians`: `${obj.food} is not suitable for vegetarians`)
 }
+
 
 
 
