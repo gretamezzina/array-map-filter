@@ -62,8 +62,19 @@ Expected OUTPUT for this sample:
  */
 
 function getMoviesFreshness(movies) {
+  return movies.map (movie => movie.rating < 60 ? movie.lablel = 'rotten' : movie.rating <= 75 && movie.rating >=60 ? movie.lablel = 'fresh' : movie.lablel = 'certified fresh'  )
 }
 
+// * Each "movie" object has two properties:
+//    * `name` name of the movie
+//    * `rating` the average rating it's been given on rottentomatoes.com
+// * `getMoviesFreshness` must return an array containing the objects of the input array, EACH
+//   having a new property. The KEY of this new property should be `label`, and the associated VALUE
+//   should be a string, which depends on the `rating` property:
+//   * If `rating` is STRICTLY below 60, the value to assign to `label` is "rotten".
+//   * If `rating` is between 60 and 75 (included), the value to assign to `label` is "fresh".
+//   * If `rating` STRICTLY above 75, the value to assign to `label` is "certified fresh".
+// * You might need a refresher on how to manipulate object literals:
 
 
 // DON'T TOUCH THIS!
